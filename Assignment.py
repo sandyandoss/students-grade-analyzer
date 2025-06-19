@@ -37,7 +37,7 @@ while number < 5:
     if case == "B":
       sum = 0
       for student in students:
-          sum += student[1]  # student[1] is the grade
+          sum += student[1]  
       average = sum / len(students)
       number+=1
       print("Average grade is:", average)
@@ -65,5 +65,5 @@ while number < 5:
        print("Count of students who passed the exam is:",passed_count)
   
     elif case == "E":
-        print("Exiting the program. Goodbye!")
+        print("Exiting ...")
         break
