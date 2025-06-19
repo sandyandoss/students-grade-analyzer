@@ -27,43 +27,43 @@ while number < 5:
     print("B - Check the average grade of the class")
     print("C - Check the highest grade earned")
     print("D - Display the count of students who passed")
-    print("Q - Exit the menu early")
+    print("E - Exit the menu early")
 
-    case = input("Choose an option (A, B, C, D, or Q): ").upper()
-  if case =="A":
-     number+=1
-     print(students)
-     
-  if case == "B":
-    sum = 0
-    for student in students:
-        sum += student[1]  # student[1] is the grade
-    average = sum / len(students)
-    number+=1
-    print("Average grade is:", average)
-
-  elif case=="C":
-    highest_grade=0
-    student_with_highest_grade =""
-
-    for student in students:
+    case = input("Choose an option (A, B, C, D, or E): ").upper()
+    if case =="A":
+       number+=1
+       print(students)
+       
+    if case == "B":
+      sum = 0
+      for student in students:
+          sum += student[1]  # student[1] is the grade
+      average = sum / len(students)
+      number+=1
+      print("Average grade is:", average)
+  
+    elif case=="C":  
+      highest_grade=0
+      student_with_highest_grade =""
+  
+      for student in students:
         __name__=student[0]
         __grade__=student[1]
         if __grade__>highest_grade:
             highest_grade= __grade__
             student_with_highest_grade=__name__
             number+=1
-    print("The highest grade is:",highest_grade,"earned by:",student_with_highest_grade)
-
-  elif case=="D":
-     passed_count=0
-     for student in students:
-       __grade__=student[1]
-       if __grade__>=60:
-            passed_count+=1
-            number+=1
-     print("Count of students who passed the exam is:",passed_count)
-
-  elif case == "Q":
+      print("The highest grade is:",highest_grade,"earned by:",student_with_highest_grade)
+  
+    elif case=="D":
+       passed_count=0
+       for student in students:
+         __grade__=student[1]
+         if __grade__>=60:
+              passed_count+=1
+              number+=1
+       print("Count of students who passed the exam is:",passed_count)
+  
+    elif case == "E":
         print("Exiting the program. Goodbye!")
         break
